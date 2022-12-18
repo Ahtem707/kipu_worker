@@ -7,9 +7,6 @@ settings.py
 
 # Ингнорируем кэш python
 __pycache__
-# admin/KIPY/__pycache__
-# admin/KIPY_ADMIN/__pycache__
-# bot/__pycache__
 
 # Ингнорируем логи
 *.log
