@@ -98,9 +98,9 @@ async def task_keyboard(project_id: str, link: str, variable: str, num_page: str
 
 async def webAppKeyboardInline(): #создание inline-клавиатуры с webapp кнопкой
    keyboard = InlineKeyboardMarkup(row_width=1)
-   webApp = WebAppInfo(url="https://127.0.0.1:8000/reg/") #создаем webappinfo - формат хранения url
+   webApp = WebAppInfo(url="https://www.ahtem.ru:3005/reg/") #создаем webappinfo - формат хранения url
    one = InlineKeyboardButton(text="Обо мне", web_app=webApp) #создаем кнопку типа webapp
-   webApp_1 = WebAppInfo(url="https://127.0.0.1:8000/settings/")  # создаем webappinfo - формат хранения url
+   webApp_1 = WebAppInfo(url="https://www.ahtem.ru:3005/settings/")  # создаем webappinfo - формат хранения url
    too = InlineKeyboardButton(text="Настройки уведомлений", web_app=webApp_1)  # создаем кнопку типа webapp
    keyboard.add(one, too) #добавляем кнопку в клавиатуру
 
