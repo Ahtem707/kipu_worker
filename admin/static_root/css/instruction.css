@@ -7,7 +7,7 @@ button {
 }
 
 .container {
-    width: 800px;
+    width: 350px;
     margin: 50px auto;
 }
 .toggle {
@@ -20,13 +20,13 @@ button {
 }
 
 .line_input {
-    margin: 20px 0px;
+    margin: 2% 0px;
     display: block;
     width: 100%;
-    border: 6px solid black;
+    border: 4px solid black;
     border-radius: 75px; 
     padding: 19px 42px;
-    font-size: 48px;
+    font-size: 24px;
     color: black;
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -54,10 +54,4 @@ input::placeholder {
     display: flex;
     margin-top: 190px;
     float: right;
-}
-
-@media (max-width: 500px) {
-    option {
-        font-size: 15px;
-    }
 }

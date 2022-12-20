@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .forms import UsersForm
+from .models import Users
 # Create your views here.
 # from KIPY_ADMIN.forms import UserForm
 
@@ -18,6 +19,13 @@ def reg_view(request):
             print(error)
     else:
         form = UsersForm()
+        
+        # user = Users.objects.filter(telegram_id="965047706")
+        # if user.exists:
+        #     user = user.get()
+        #     form = UsersForm(instance=user)
+        # else:
+        #     form = UsersForm()
     return render(request, 'reg.html', {'form': form})
 
 

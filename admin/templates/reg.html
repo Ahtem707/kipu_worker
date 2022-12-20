@@ -5,14 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="{% static 'css/reg.css' %}?v=e91bbc5968ddb1cfcb958a97" type="text/css" rel="stylesheet">
-{#	<link href="{% static 'css/instruction.css' %}?v=e91bbc5968ddb1cfcb958a97" type="text/css" rel="stylesheet">#}
-    <link href="{% static 'css/reset.css' %}?v=e91bbc5968ddb1cfcb958a97" type="text/css" rel="stylesheet">
-    <link href="{% static 'css/switch.css' %}?v=e91bbc5968ddb1cfcb958a97" type="text/css" rel="stylesheet">
+    <link href="{% static 'css/reset.css' %}?v=asf4444" type="text/css" rel="stylesheet">
+    <link href="{% static 'css/reg.css' %}?v=asf55783" type="text/css" rel="stylesheet">
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
-    <title>Document</title>
+    <title>Обо мне</title>
 </head>
-<body style="overflow: auto">
+<body>
     <div class="container">
         <form method="post">
             {% csrf_token %}
@@ -22,26 +20,20 @@
             {{ form.phone }}
             {{ form.birthday }}
             {{ form.mail }}
-        <button id='button' type="submit">Сохранить</button>
-
+            <button id='button'><img class="img-1" src="{% static 'img/LogIn button.svg' %}" alt=""></button>
+        </form>
         <div class="imgs">
-            <img class="img-2" src="{% static 'img/77cb00d5c667754a5052c1a77fa7e736 2.svg' %}" alt="img_1">
+            <img class="img-2" src="{% static 'img/Logo.svg' %}" alt="img_1">
             <img class="img-3" src="{% static 'img/SP Hunter.svg'%}" alt="img_2">
         </div>
-        </form>
     </div>
-{#    <script src="{% static 'js/app.js' %}" type="text/javascript"></script>#}
     <script>
-		console.log("myLog: 1")
 		let tg = window.Telegram.WebApp;
-        {#const tg_id =#}
-        {#console.log(tg.initDataUnsafe.user.id)#}
         const user_id = tg.initDataUnsafe.user.id
-        {#window.Telegram.WebApp.close()#}
 		tg.expand(); //расширяем на все окн
         document.getElementById('telegram_id').value=user_id
         tg.sendData(user_id);
-      //при клике на основную кнопку отправляем данные в строковом виде
+        //при клике на основную кнопку отправляем данные в строковом виде
     </script>
 </body>
 </html>
